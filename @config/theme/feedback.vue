@@ -15,7 +15,8 @@ const props = defineProps({
     branch: {
         type: String,
         default: 'master'
-    }
+    },
+    version: String
 })
 
 const { page, lang } = useData()
@@ -29,7 +30,7 @@ function click() {
     const title = encodeURIComponent('docs issue at: ' + page.value.title);
 
     // 文件地址
-    const filePathInRepo = `${props.repo}/blob/${props.branch}/${page.value.filePath}`;
+    const filePathInRepo = `${props.repo}/blob/${props.branch}/versions/${props.version}/${page.value.filePath}`;
     const filePath = `**filePath:** [${page.value.filePath}](${filePathInRepo})`;
 
     // 有错误的内容（光标选择的文本范围）

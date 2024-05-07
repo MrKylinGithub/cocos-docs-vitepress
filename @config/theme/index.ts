@@ -14,7 +14,8 @@ export default function(version: string) {
           currentVersion: version
         }),
         'aside-ads-after': () => h(feedback, {
-          repo: github
+          repo: github,
+          version: version
         })
       })
     }
