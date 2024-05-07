@@ -1,0 +1,1 @@
+node ./scripts/create-sidebar.js versions/3.7/en/SUMMARY.md
