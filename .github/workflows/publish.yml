@@ -32,5 +32,5 @@ jobs:
       - name: 安装依赖
         run: npm install
 
-      - name: Run a multi-line script
+      - name: 构建
         run: npm run docs:build
