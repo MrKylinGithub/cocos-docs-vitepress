@@ -28,9 +28,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: 安装依赖
         run: npm install
 
       - name: 构建
         run: npm run docs:build
+     
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./versions/3.8/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4      
