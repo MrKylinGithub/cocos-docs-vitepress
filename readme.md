@@ -1,4 +1,6 @@
 
+##
+[站点预览](https://dogodo-cc.github.io/cocos-creator-docs/zh/)
 
 ## 生成侧边栏数据
 node ./scripts/create-sidebar.js versions/3.7/en/SUMMARY.md
