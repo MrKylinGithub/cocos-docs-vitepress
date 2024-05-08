@@ -23,3 +23,5 @@ for (const version of versions) {
         }
     }
 }
+
+// 废弃软连接的方式，因为 gitignore 无法忽略软连接，会增加使用的理解成本。
