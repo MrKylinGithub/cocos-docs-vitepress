@@ -23,7 +23,11 @@ const list = ref([
         version: '3.8'
     },
     {
-        version: '3.7'
+        version: '3.7',
+        link: 'https://www.baidu.com'
+    },
+    {
+        version: '3.6'
     }
 ]);
 
@@ -32,7 +36,11 @@ function changeVersion(e) {
     
     if(ver === props.currentVersion) return;
 
-    const link = `https://docs.cocos.com/creator/${ver}/manual/${langPathMap[lang.value]}/`;
+    const goToVersion = list.value.find(v => v.version === ver);
+
+    if(!goToVersion) return;
+    
+    const link = goToVersion.link || `https://docs.cocos.com/creator/${ver}/manual/${langPathMap[lang.value]}/`;
     window.location.href = link;
 
     // hack
