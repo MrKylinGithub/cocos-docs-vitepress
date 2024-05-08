@@ -1,21 +1,21 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
-import { github } from './config'
+import { github, branch } from './config'
 
 export default function(version: string) {
   return defineConfig({
     lang: 'zh-Hans',
-    description: '由 Vite 和 Vue 驱动的静态站点生成器',
+    description: 'cocos creator 用户手册',
   
     themeConfig: {
   
       editLink: {
-        pattern: `${github}/edit/master/versions/${version}/:path`,
+        pattern: `${github}/edit/${branch}/versions/${version}/:path`,
         text: '在 GitHub 上编辑此页面'
       },
   
       footer: {
         message: '基于 MIT 许可发布',
-        copyright: `版权所有 © 2019-${new Date().getFullYear()} 尤雨溪`
+        copyright: `版权所有 © 2019-${new Date().getFullYear()} cocos`
       },
   
       docFooter: {

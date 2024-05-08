@@ -3,7 +3,7 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import versionList from './versions-list.vue'
 import feedback from './feedback.vue'
-import { github } from '../config'
+import { github, branch } from '../config'
 
 export default function(version: string) {
   return {
@@ -15,7 +15,8 @@ export default function(version: string) {
         }),
         'aside-ads-after': () => h(feedback, {
           repo: github,
-          version: version
+          version: version,
+          branch: branch
         })
       })
     }
