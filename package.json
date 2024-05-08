@@ -4,7 +4,6 @@
   "description": "cocos-creator-docs",
   "type": "module",
   "scripts": {
-    "postinstall": "node ./scripts/create-public-link.js",
     "docs:dev": "vitepress dev versions/3.8 --port=5001 --host",
     "docs:build": "vitepress build versions/3.8",
     "docs:preview": "vitepress preview versions/3.8"
