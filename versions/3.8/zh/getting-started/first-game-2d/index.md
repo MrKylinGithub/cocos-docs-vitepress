@@ -10,13 +10,13 @@
 
 访问 [Cocos Creator 官网](https://www.cocos.com/creator-download) 下载最新的 Cocos Dashboard 即可以对引擎的版本、项目进行统一的管理，安装完成后打开 Dashboard。
 
-![dashboard](./images/projects.png)
+![dashboard](images/projects.png)
 
 ### 安装引擎
 
 通常我们建议使用最新发布的引擎进行开发，以获取更多的特性和支持。
 
-![download-editor](./images/download-editor.png)
+![download-editor](images/download-editor.png)
 
 在 **编辑器** 分页中，点击不同版本的安装按钮可安装编辑器。
 
@@ -24,7 +24,7 @@
 
 通过 **项目** 分页，找到 **新建** 按钮选择新建一个项目。
 
-![craete-2d-project](./images/create-2d-empty.png)
+![craete-2d-project](images/create-2d-empty.png)
 
 Cocos Creator 提供不同类型的模板和示例，您可以点击 **模板** 以及 **示例** 的分页来选择不同的项目类型，本节我们选择创建一个空的 2D 项目（Empty(2D)）。
 
@@ -40,15 +40,15 @@ Cocos Creator 提供不同类型的模板和示例，您可以点击 **模板** 
 
 在 **层级管理** 中点击右键，可以创建不同的节点类型，请尝试创建一个 Sprite 类型的节点：
 
-![create-sprite.png](./images/create-sprite.png)
+![create-sprite.png](images/create-sprite.png)
 
 接下来我们找到内置的 `default_btn_normal` 资源并将其赋予给 Sprite 的 Sprite Frame 属性
 
-![craete-sprite.gif](./images/create-sprite.gif)
+![craete-sprite.gif](images/create-sprite.gif)
 
 接下来再创建一个 **空的** 的节点，并将其名字命名为 'Player'：
 
-![create-player.gif](./images/create-player.gif)
+![create-player.gif](images/create-player.gif)
 
 如果您没有在创建时输入节点的名字，仍然有两种修改名字的方式：
 
@@ -65,11 +65,11 @@ Cocos Creator 提供不同类型的模板和示例，您可以点击 **模板** 
 
 接下来将 Body 节点的 Y 坐标调整到 40:
 
-![40-on-y.png](./images/40-on-y.png)
+![40-on-y.png](images/40-on-y.png)
 
 调整 Body 的颜色，在 **属性检查器** 上找到 **Color** 属性并展开，将颜色调整为红色：
 
-![to-red.png](./images/to-red.png)
+![to-red.png](images/to-red.png)
 
 ## 创建第一个脚本
 
@@ -81,7 +81,7 @@ Cocos Creator 提供不同类型的模板和示例，您可以点击 **模板** 
 
 通常我们会选择创建一个新的目录来存放这些脚本，接下来我们将创建一个名为 'Scripts' 的目录并新建一个名为 `PlayerController` 的脚本用于控制角色：
 
-![create-scripts.gif](./images/create-scripts.gif)
+![create-scripts.gif](images/create-scripts.gif)
 
 这样由引擎模板创建的脚本为组件，他的代码如下：
 
@@ -103,7 +103,7 @@ export class PlayerController extends Component {
 
 **组件** 必须要挂在在某个节点上才会生效，因此尝试将 PlayerController 脚本拖拽到 Player 节点的 **属性检查器上**：
 
-![add-player-controller.gif](./images/add-player-controller.gif)
+![add-player-controller.gif](images/add-player-controller.gif)
 
 > 您也可以点击 **Add Component** 按钮来添加不同的组件。
 > 由于 `Node` 这个类名在 TypeScript 内置库内也有同名的类，因此需要注意在导入时需要确保导入的是 `cc` 命名空间下的 `Node`，代码示例如下：
@@ -118,7 +118,7 @@ export class PlayerController extends Component {
 - 在 **层级管理器** 里面点击右键创建一个新的精灵（Sprite）节点并选择将 **Sprite Frame** 属性配置为 default_btn_normal
 - 修改其名字为 Box
 
-    ![create-box.png](./images/create-box.png)
+    ![create-box.png](images/create-box.png)
 
 ### 预制体
 
@@ -128,7 +128,7 @@ export class PlayerController extends Component {
 
 场景内的 Box 节点，运行游戏之前可以将它删除。
 
-![create-box-prefab.gif](./images/create-box-prefab.gif)
+![create-box-prefab.gif](images/create-box-prefab.gif)
 
 > 一般来说，我们会用不同的目录来存放不同类型的资源，保持您的工程目录干净整洁是非常好的习惯！
 
@@ -136,19 +136,19 @@ export class PlayerController extends Component {
 
 引擎必须要一个场景才可以正常运行，目前我们编辑的场景是未经保存的，在 **资源管理器** 里面创建一个名为 Scene 的目录用于保存场景：
 
-![scene-dir.png](./images/scene-dir.png)
+![scene-dir.png](images/scene-dir.png)
 
 按下 <kbd>Ctrl</kbd> + <kbd>S</kbd>，在首次保存场景时会弹出保存的界面，之后我们输入 game，并将其保存在 Scene 目录下：
 
-![save-scene.png](./images/save-scene.png)
+![save-scene.png](images/save-scene.png)
 
 此时场景就保存完毕，我们可以在 **资源管理器** 内看到场景资源，以后任何的修改都可以通过按下 <kbd>Ctrl</kbd> + <kbd>S</kbd> 来保存到 game 这个场景内。
 
-![saved-scene.png](./images/saved-scene.png)
+![saved-scene.png](images/saved-scene.png)
 
 此时就可以观察到整个场景的状态，红色用于代表玩家而白色代表地面的地块。
 
-![scene.png](./images/scene.png)
+![scene.png](images/scene.png)
 
 > 记得随时保存你的场景，以避免在断电或不可预知的情况下的内容丢失。
 
@@ -302,9 +302,9 @@ update (deltaTime: number) {
 }
 ```
 
-此时如果点击 ![preview-menu.png](./images/preview-menu.png) 已经可以看到角色的运动了。
+此时如果点击 ![preview-menu.png](images/preview-menu.png) 已经可以看到角色的运动了。
 
-![without-scale.gif](./images/without-scale.gif)
+![without-scale.gif](images/without-scale.gif)
 
 需要注意一点，在 2D 世界里面，如果位移一个单位，那么这个位置不会很明显，这是因为我们的 Cavans 设定为  960 x 640, 因此横向移动 1 个单位，他相当于移动 Canvas 的 1/960。
 
@@ -338,7 +338,7 @@ jumpByStep(step: number) {
 
 再次启动游戏可以看到正常的移动速度了：
 
-![with-scale.gif](./images/with-scale.gif)
+![with-scale.gif](images/with-scale.gif)
 
 此时 `PlayerController` 代码如下：
 
@@ -420,29 +420,29 @@ Cocos Creator 支持多种动画效果，比如常见的关键帧动画、Spine 
 
 首先在角色的 Body 节点上，增加一个 Animation 的组件：
 
-![add-animation.png](./images/add-animation.png)
+![add-animation.png](images/add-animation.png)
 
 在 **资源管理器** 内新建 Animation 的目录，并创建一个名为 oneStep 的动画剪辑。
 
-![create-clip-onestep.gif](./images/create-clip-onestep.gif)
+![create-clip-onestep.gif](images/create-clip-onestep.gif)
 
 在 **层级管理器** 里面选中 Body 节点，并将 oneStep 拖拽到 **Clips** 属性上：
 
-![assign-clip.gif](./images/assign-clip.gif)
+![assign-clip.gif](images/assign-clip.gif)
 
 在编辑器下方控制台处切换到 **动画** 分页并点击下方的 **进入编辑模式** 按钮：
 
-![enter-anim-editing-mode.png](./images/enter-anim-editing-mode.png)
+![enter-anim-editing-mode.png](images/enter-anim-editing-mode.png)
 
 在动画编辑器里面，可以添加不同的动画轨道。
 
-![add-position-track.png](./images/add-position-track.png)
+![add-position-track.png](images/add-position-track.png)
 
 添加完成 postion 这个轨道以后，就可以添加不同的关键帧，添加方式也比较简单，我们可以在编辑模式下，只要在场景中或者属性检查器内修改物体的位置，此时如果动画轨道上没有关键帧，则会在轨道上添加一个新的关键帧。
 
 这里我们将指向当前帧的指针拖拽到不同位置，并改变物体的位置，此时就会创建新的关键帧。
 
-![add-keyframes.gif](./images/add-keyframes.gif)
+![add-keyframes.gif](images/add-keyframes.gif)
 
 布局下列的关键帧：
 
@@ -454,11 +454,11 @@ Cocos Creator 支持多种动画效果，比如常见的关键帧动画、Spine 
 
 可以通过点击 **播放** 按钮在场景中预览动画。
 
-![preview-oneStep.gif](./images/preview-oneStep.gif)
+![preview-oneStep.gif](images/preview-oneStep.gif)
 
 参考 oneStep 动画的制作过程，制作 twoStep 动画。
 
-![create-twostep.gif](./images/create-twostep.gif)
+![create-twostep.gif](images/create-twostep.gif)
 
 ### 播放动画
 
@@ -540,11 +540,11 @@ jumpByStep(step: number) {
 
 回到编辑器，此时可以通过拖拽的方式添加 BodyAnim 到 PlayerController 上：
 
-![assign-body-anim.gif](./images/assign-body-anim.gif)
+![assign-body-anim.gif](images/assign-body-anim.gif)
 
 点击运行游戏，点击鼠标都可以看到角色正常的跳起来：
 
-![preview-anim.gif](./images/preview-anim.gif)
+![preview-anim.gif](images/preview-anim.gif)
 
 如果仔细观察的话，现在我们使用的是统一的 `_jumpTime = 0.1`，实际上两个动画的时长并不一致，因此可以看到如上图奇怪的动画效果，可以通过获取动画剪辑的时长来动态调整 `_jumpTime`。
 这里举个例子：
@@ -586,7 +586,7 @@ jumpByStep(step: number) {
 
 > 这里使用到了三元表达式 `condition ? A:B` 相当于条件满足时调用 A 反之调用 B
 
-![jumptime-with-duration.gif](./images/jumptime-with-duration.gif)
+![jumptime-with-duration.gif](images/jumptime-with-duration.gif)
 
 ## 游戏管理器（GameManager）
 
@@ -602,7 +602,7 @@ jumpByStep(step: number) {
 
 创建好 GameManager 之后，我们可以将其挂在在场景内任何一个节点上，但出于清晰的考虑我们一般会选择创建一个同名的节点，并将 GameManager 挂在在他上面：
 
-![create-game-manager.png](./images/create-game-manager.png)
+![create-game-manager.png](images/create-game-manager.png)
 
 首先我们需要让 GameManager 知道他应该用那个资源作为地图块来创建，因此我们可以在代码中添加 `boxPrefab` 来指向我们之前已经创建好的 Box 预制体。
 
@@ -635,7 +635,7 @@ export class GameManager extends Component {
 
 之后回到编辑器并将 Box 预制体拖拽到 GameManager 上：
 
-![assign-box-prefab.gif](./images/assign-box-prefab.gif)
+![assign-box-prefab.gif](images/assign-box-prefab.gif)
 
 我们可以用一个数值类型的数组来存储当前的位置到底是方块还是坑，但实际上有更好的办法，我们声明如下的枚举，用 `BT_NONE` 来表示坑，而 `BT_STONE` 来表示方块，这样的表示会让我们的代码更加的易读。
 
@@ -755,7 +755,7 @@ start() {
 
 运行游戏后可以观察到地图的生成的情况：
 
-![gen-road.png](./images/gen-road.png)
+![gen-road.png](images/gen-road.png)
 
 ## 相机和卷轴
 
@@ -767,7 +767,7 @@ start() {
 
 此时运行游戏就可以观察到相机的跟随情况：
 
-![scroll.gif](./images/scroll.gif)
+![scroll.gif](images/scroll.gif)
 
 ## 菜单制作
 
@@ -777,31 +777,31 @@ start() {
 
 在 **层级管理器** 中点击右键选择创建一个新的 Canvas 并将其命名为 UICanvas：
 
-![create-ui-canvas.png](./images/create-ui-canvas.png)
+![create-ui-canvas.png](images/create-ui-canvas.png)
 
-![ui-canvas.png](./images/ui-canvas.png)
+![ui-canvas.png](images/ui-canvas.png)
 
 在 UICanvas 上点击右键并创建一个空的节点命名为 'StartMenu'，并在 StartMenu 节点下创建一个按钮将其子节点 Label 的 **String** 属性修改为 Play。
 
-![create-start-menu.png](./images/create-start-menu.png)
+![create-start-menu.png](images/create-start-menu.png)
 
 之后可以添加一个背景框和一些文本提示用于提示用户游戏的操作是怎么样的：
 
 选中 StartMenu 点击右键创建一个 Sprite，将其名字修改为 Bg，从 **资源管理器** 的 internal 目录内，找到 default_panel 资源并赋予给 Bg 的 **Sprite Frame** 属性，调整 **Type** 为 **SLICED**，并调整好 Bg 的 UITransform 内的 Content Size 属性：
 
-![create-bg.gif](./images/create-bg.gif)
+![create-bg.gif](images/create-bg.gif)
 
 在 StartMenu 下方创建一个名为 Title 的 Label，并修改其属性如下所示：
 
-![create-title.png](./images/create-title.png)
+![create-title.png](images/create-title.png)
 
 继续创建一些 Label 用于描述游戏的玩法：
 
-![create-tip.png](./images/create-tip.png)
+![create-tip.png](images/create-tip.png)
 
 同理添加一个 Label 用于代表角色走了几步，注意 Step 这个 Label 不要作为 StartMenu 的子节点：
 
-![step.png](./images/step.png)
+![step.png](images/step.png)
 
 接下来我们就可以完善整个游戏逻辑。
 
@@ -1019,7 +1019,7 @@ export class GameManager extends Component {
 
 回到编辑器，绑定好 GameManager 需要的属性：
 
-![bind-manager.png](./images/bind-manager.png)
+![bind-manager.png](images/bind-manager.png)
 
 ### 绑定按钮事件
 
@@ -1033,7 +1033,7 @@ onStartButtonClicked() {
 
 回到编辑器，找到开始按钮，并在 **Click Events** 属性后的输入框内输入 1，然后找到 GameManager 节点并拖拽到下方的 cc.Node 属性内，之后从第二栏的下拉中找到 GameManager 脚本，再从第三栏中选择 `onStartButtonClicked` 事件。
 
-![click-event.gif](./images/click-event.gif)
+![click-event.gif](images/click-event.gif)
 
 此时已可以正常的开始玩游戏：
 
@@ -1170,33 +1170,33 @@ update (deltaTime: number) {
 
 此时如果我们启动游戏，则可以看到重叠的现象，这是因为 UICanvas 下的相机也绘制了 Canvas 下的内容：
 
-![layer-error.png](./images/layer-error.png)
+![layer-error.png](images/layer-error.png)
 
 为了解决这个问题我们可以做如下的处理：
 
 - 将 Canvas 下相关的节点层级修改为 DEFAULT：
 
-    ![layer-default.png](./images/layer-default.png)
+    ![layer-default.png](images/layer-default.png)
 
 - 将 Box 这个资源的层级修改为 DEFAULT：
 
-    ![box-layer.png](./images/box-layer.png)
+    ![box-layer.png](images/box-layer.png)
 
     双击该预制体就可以进入到预制体编辑器界面，修改后记得点击场景视图内的 **保存** 按钮保存预制体的变更。
 
-    ![save-prefab.png](./images/save-prefab.png)
+    ![save-prefab.png](images/save-prefab.png)
 
 - 修改 Canvas/Player 下的 Camera 的 **Visibility** 属性如下：
 
-    ![cavans-camera.png](./images/cavans-camera.png)
+    ![cavans-camera.png](images/cavans-camera.png)
 
 - 修改 UICavans 下的 Camera 如下：
 
-    ![images/uicanvas-camera.png](./images/uicanvas-camera.png)
+    ![images/uicanvas-camera.png](images/uicanvas-camera.png)
 
 再次启动游戏则显示正常：
 
-![after-layer-setting.gif](./images/after-layer-setting.gif)
+![after-layer-setting.gif](images/after-layer-setting.gif)
 
 ## 更多功能
 
