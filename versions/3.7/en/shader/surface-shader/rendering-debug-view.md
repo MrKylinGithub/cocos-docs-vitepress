@@ -4,7 +4,7 @@
 
 By selecting the corresponding debug mode in the upper-right corner of the scene preview window in the editor, you can view the model, materials, lighting and other computational data on the same screen, and quickly locate the problem when the rendering effect is abnormal.
 
-![debug-view](img/debug-view.jpg)
+![debug-view](../img/debug-view.jpg)
 
 To facilitate pixel-by-pixel comparison, we use full-screen debugging instead of picture-in-picture display, which allows us to quickly switch between different data in the same screen to locate rendering errors, and to use the color picker to explore the pixel-specific values.
 

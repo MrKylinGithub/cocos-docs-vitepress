@@ -35,4 +35,4 @@
 
 | 3ds Max Viewport                                                            | Cocos Creator Scene Viewport                                                  |
 |-----------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| <img height="600" src="../../../zh/asset/model/max/07-1-max-viewport.png"/> | <img height="600" src="../../../zh/asset/model/max/07-2-cocos-viewport.png"/> |
+| <img height="600" src="./max/07-1-max-viewport.png"/> | <img height="600" src="./max/07-2-cocos-viewport.png"/> |

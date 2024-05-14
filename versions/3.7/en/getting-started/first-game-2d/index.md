@@ -90,7 +90,7 @@ Cocos Creator uses TypeScript as its scripting programming language. It has simp
 
 Creating a script component in Cocos Creator is very simple. All you need to do is right-click in the Assets Manager window, and select "Create -> TypeScript -> NewComponent" option.
 
-<img src='images/create-fist-script.png' width='64%' height='64%'></img>
+<img src='./images/create-fist-script.png' width='64%' height='64%'></img>
 
 For ease of management, it is often recommended to create a folder named `Script` to put all of your scripts in.
 

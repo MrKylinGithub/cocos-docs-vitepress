@@ -24,7 +24,6 @@ const list = ref([
     },
     {
         version: '3.7',
-        link: 'https://www.baidu.com'
     },
     {
         version: '3.6'
