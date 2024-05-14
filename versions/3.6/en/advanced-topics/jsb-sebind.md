@@ -81,7 +81,7 @@ int Game::init() {
 
 Start the program in Debug mode, and connect with Chrome devtools:
 
-![devtool](./sebind/devtool-test.PNG)
+![devtool](./sebind/devtool-test.png)
 
 Done.
 
@@ -409,7 +409,7 @@ superUser.constructor<sebind::ThisObject, const std::string &>() // JS: new Supe
 
 When calling the corresponding constructor in JS, all `sebind::ThisObject` parameters should be ignored.  
 
-![sebind::ThisObject](./sebind/thisobject_placeholder.PNG)
+![sebind::ThisObject](./sebind/thisobject_placeholder.png)
 
 <details>
 <summary>

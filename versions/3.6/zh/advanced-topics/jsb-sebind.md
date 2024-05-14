@@ -85,7 +85,7 @@ int Game::init() {
 
 启动程序，在 Debug 模式下通过 Chrome devtools 验证：
 
-![devtool](./sebind/devtool-test.PNG)
+![devtool](./sebind/devtool-test.png)
 
 此时可观察到导出成功。
 
@@ -415,7 +415,7 @@ User(se::Object *self, const std::string &name_) {
 ``` 
 JS 中调用对应构造函数的时候，需要忽略 `sebind::ThisObject` 参数。
 
-![sebind::ThisObject](./sebind/thisobject_placeholder.PNG)
+![sebind::ThisObject](./sebind/thisobject_placeholder.png)
 
 HelloSEBind.cpp 完整代码如下：
 

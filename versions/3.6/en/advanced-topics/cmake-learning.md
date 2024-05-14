@@ -141,7 +141,7 @@ The `target` in the **find compilation headers** command above is the executable
             [source1] [source2 ...])
     ```
 
-    - `name`: add a target library named <name>, which is built from the source files listed in the command (source1, source2), and is globally unique in the project. The source files can be ignored here if they are subsequently specified via [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html?highlight=target_sources) .
+    - `name`: add a target library named `<name>`, which is built from the source files listed in the command (source1, source2), and is globally unique in the project. The source files can be ignored here if they are subsequently specified via [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html?highlight=target_sources) .
 
     - `STATIC` (static library), `SHARED` (dynamic library), `MODULE` (module library): used to specify the type of library to be created. STATIC libraries are archives of object files and are used to link to other targets. SHARED libraries are dynamically linked and loaded at runtime. MODULE libraries are plug-ins that are not linked to other targets, but can be loaded dynamically at runtime using a function similar to dlopen.
 

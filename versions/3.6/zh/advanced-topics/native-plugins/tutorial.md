@@ -14,17 +14,17 @@
 
     启动 CocosCreator，在指定目录执行 `创建空工程`。
 
-    ![create](doc/images/1_create_empty_project.PNG)
+    ![create](doc/images/1_create_empty_project.png)
 
 - 创建并保存一个空的场景
 
-    ![save scene](doc/images/1_2_save_emtpy_scene.PNG)
+    ![save scene](doc/images/1_2_save_emtpy_scene.png)
 
 - 通过 **构建发布** 面板导出原生工程并构建，生成 `native/` 目录
 
     这里在 Windows 上新建构建任务。
 
-    ![build windows](doc/images/1_3_create_windows_build.PNG)
+    ![build windows](doc/images/1_3_create_windows_build.png)
 
     执行 **构建**，同时生成 `native/` 目录。
 
@@ -150,11 +150,11 @@
 
     - 自动生成一个 `plugin_registry` 目标，用于初始化所有启用的插件：
 
-        ![Solution Explorer](./doc/images/2_1_vs_project.PNG)
+        ![Solution Explorer](./doc/images/2_1_vs_project.png)
 
     - 直接运行目标会导致类似的报错：
 
-        ![link error](./doc/images/2_1_link_error.PNG)
+        ![link error](./doc/images/2_1_link_error.png)
 
 - 编辑 `hello_cocos_glue.cpp`
 
@@ -197,13 +197,13 @@
 
 - 运行目标工程：
 
-    ![empty window](./doc/images/2_3_empty_window.PNG)
+    ![empty window](./doc/images/2_3_empty_window.png)
 
 - 为了验证我们的原生插件是否已经加载，我们需要连接 devtools：
 
     从 `Output` 面板，获取调试连接。
 
-    ![debug url](./doc/images/2_3_debug_url.PNG)
+    ![debug url](./doc/images/2_3_debug_url.png)
 
     打开浏览器，输入上图中的调试链接地址，在控制台（Console）中键入下面的代码：
 
@@ -211,7 +211,7 @@
     new Demo("World").hello("Cocos")
     ```
 
-    ![devtools](./doc/images/2_5_devtool.PNG)
+    ![devtools](./doc/images/2_5_devtool.png)
 
     根据输出可以确认，我们的接口已经成功通过原生插件导出。
 
@@ -275,7 +275,7 @@
 
 - 新增 Android 的构建任务
 
-    ![Android build](./doc/images/3_1_android_build.PNG)
+    ![Android build](./doc/images/3_1_android_build.png)
 
 构建后可使用 Android Studio 打开工程，并使用 devtool 调试验证。
 

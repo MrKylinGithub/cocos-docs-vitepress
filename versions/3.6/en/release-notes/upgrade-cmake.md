@@ -6,11 +6,11 @@ Versions prior to v3.6 do not support specifying a cmake path, and can be upgrad
 
 1. Go to https://cmake.org/download/ to download the required cmake version, and extract it
 
-![unzip cmake for windows](./unzip-cmake-win.PNG)
+![unzip cmake for windows](./unzip-cmake-win.png)
 
 2. Open the editor internal directory `resources/tools/cmake/`
 
-![editor cmake path](./editor-cmake-path.PNG)
+![editor cmake path](./editor-cmake-path.png)
 
 3. Overwrite the editor's built-in cmake with the downloaded cmake content, leaving the directory structure unchanged.
 

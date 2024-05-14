@@ -34,4 +34,4 @@
 
 | Maya Viewport                                         | Cocos Creator Scene Viewport                           |
 |-------------------------------------------------------|--------------------------------------------------------|
-| <img height="600" src="maya/07-1-maya-viewport.png"/> | <img height="600" src="maya/07-2-cocos-viewport.png"/> |
+| <img height="600" src="./maya/07-1-maya-viewport.png"/> | <img height="600" src="./maya/07-2-cocos-viewport.png"/> |

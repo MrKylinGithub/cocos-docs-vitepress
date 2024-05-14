@@ -6,11 +6,11 @@
 
 1. 到 https://cmake.org/download/  下载需要的 cmake 版本，并解压
 
-![unzip cmake for windows](./unzip-cmake-win.PNG)
+![unzip cmake for windows](./unzip-cmake-win.png)
 
 2. 打开编辑内部目录 `resources/tools/cmake/`
 
-![editor cmake path](./editor-cmake-path.PNG)
+![editor cmake path](./editor-cmake-path.png)
 
 3. 用下载的 cmake 内容覆盖编辑器内建的 cmake，目录结构保持不变。
 4. 重启编辑器后生效。

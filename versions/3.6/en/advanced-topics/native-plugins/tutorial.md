@@ -12,17 +12,17 @@ This article requires some understanding of native project compilation and gener
 
     Start the CocosCreator application, and run `Create an empty project` in the chosen folder.
 
-    ![create ](doc/images/1_create_empty_project.PNG)
+    ![create ](doc/images/1_create_empty_project.png)
 
 - Create and save an empty scene
 
-    ![save scene](doc/images/1_2_save_emtpy_scene.PNG)
+    ![save scene](doc/images/1_2_save_emtpy_scene.png)
 
 - A native build is needed to be created first to generate the `native/` directory.
 
     Create a build task for any native platform, for example Windows
 
-    ![build windows](doc/images/1_3_create_windows_build.PNG)
+    ![build windows](doc/images/1_3_create_windows_build.png)
 
     Run **Build**, `native/` folder should be created after that.
 
@@ -149,11 +149,11 @@ Let's **Build** again in the build panel to refresh the Visual Studio project.
 
 Two additional targets are generated
 
-![Solution Explorer](./doc/images/2_1_vs_project.PNG)
+![Solution Explorer](./doc/images/2_1_vs_project.png)
 
 If you run the target directly, you will fail with the following link error:
 
-![link error](./doc/images/2_1_link_error.PNG)
+![link error](./doc/images/2_1_link_error.png)
 
 - Edit `hello_cocos_glue.cpp`
 
@@ -196,13 +196,13 @@ If you run the target directly, you will fail with the following link error:
 
 Start the project in debug mode, a new window should launch.
 
-![empty window](./doc/images/2_3_empty_window.PNG)
+![empty window](./doc/images/2_3_empty_window.png)
 
 Until now, we are not sure if the plugin is enabled or not.
 
 In the output window, we can the debug URL of the devtools
 
-![debug url](./doc/images/2_3_debug_url.PNG)
+![debug url](./doc/images/2_3_debug_url.png)
 
 Open the URL with chrome and type following code in Console
 
@@ -210,7 +210,7 @@ Open the URL with chrome and type following code in Console
 new Demo("World").hello("Cocos")
 ```
 
-![devtools](./doc/images/2_5_devtool.PNG)
+![devtools](./doc/images/2_5_devtool.png)
 
 The class `hello_cocos` and its methods are exported successfully!
 
@@ -277,7 +277,7 @@ The class `hello_cocos` and its methods are exported successfully!
 
 - **Create an android build task**
 
-    ![Android build](./doc/images/3_1_android_build.PNG)
+    ![Android build](./doc/images/3_1_android_build.png)
 
 Run **Build** and debug with Android Studio.
 
