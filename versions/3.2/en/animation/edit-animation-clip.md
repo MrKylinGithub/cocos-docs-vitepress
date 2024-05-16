@@ -177,7 +177,7 @@ Right-click on the animation property or click ![property](edit-animation-clip/s
 
 - Clear keyframe data: delete all keyframes on the currently selected animation property track.
 
-- Copy animation property track: copy all animation data on the currently selected animation property track and paste it to the target animation property track, supporting the shortcut keys <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + < kbd>V</kbd>. When pasting, the overlapping keyframes are overwritten by the latter, and the different parts are blended with each other.
+- Copy animation property track: copy all animation data on the currently selected animation property track and paste it to the target animation property track, supporting the shortcut keys <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd>. When pasting, the overlapping keyframes are overwritten by the latter, and the different parts are blended with each other.
 
   Copy/paste of animation property data between different editors (v3.x) is currently supported. Copy/paste of animation data is only supported for `ccType` data of the same type.
 
