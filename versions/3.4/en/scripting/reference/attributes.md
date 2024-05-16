@@ -7,7 +7,7 @@ Attributes are used to attach metadata to defined properties, similar to `Decora
 | Attribute Name | Description | Type | Default | Remarks |
 | :--- | :--- | :--- | :--- | :--- |
 | type | Restrict the data type of the property | (Any) | undefined | See [type attribute](../decorator.md#type-attribute) |
-| visible | Show or hide in the **Inspector** panel | boolean | <b id="f1">[1]</b> | See [visible attribute](../decorator.md#visible-attribute) |
+| visible | Show or hide in the **Inspector** panel | boolean | [^1] | See [visible attribute](../decorator.md#visible-attribute) |
 | displayName | Show as another name in the **Inspector** panel | string | undefined | - |
 | tooltip | Add a Tooltip for a property in the **Inspector** panel | string | undefined | - |
 | multiline | Use multi-line text boxes in the **Inspector** panel | boolean | false | - |
@@ -17,7 +17,7 @@ Attributes are used to attach metadata to defined properties, similar to `Decora
 | step | Restrict the step value in the **Inspector** panel | number | undefined | - |
 | range | Set min, max, step | [min, max, step] | undefined | step value optional |
 | slide | Show as a slider in the **Inspector** panel | boolean | false | - |
-| group | Show as a tab group in the **Inspector** panel | { name } or { id, name, displayOrder, style } | undefined | See [group attribute](../decorator.md#group) |
+| group | Show as a tab group in the **Inspector** panel | `{ name } or { id, name, displayOrder, style }` | undefined | See [group attribute](../decorator.md#group) |
 
 ## Serialization-Related Attributes
 
@@ -35,4 +35,4 @@ The following attributes cannot be used with the `get` method.
 | :--- | :--- | :--- | :--- | :--- |
 | override | Define this parameter as true when overriding parent properties | boolean | false | See [override attribute](../decorator.md#override-attribute) |
 
-> <b id="f1">[1]</b>: The default value of visible depends on the property name. When the property name starts with an underscore `_`, it is hidden by default, otherwise it is shown by default.
+> [^1]: The default value of visible depends on the property name. When the property name starts with an underscore `_`, it is hidden by default, otherwise it is shown by default.

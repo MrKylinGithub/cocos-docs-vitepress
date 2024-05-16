@@ -38,7 +38,7 @@
 
 ## 相机分组渲染
 
-分组渲染功能是通过相机组件的 Visibility 属性配合节点的 [Layer 属性](../../concepts/scene/node-component.md#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84-layer-%E5%B1%9E%E6%80%A7) 共同决定的。用户可通过代码设置 Visibility 的值来完成分组渲染。所有节点默认都属于 DEFAULT 层，在所有相机都可见。
+分组渲染功能是通过相机组件的 Visibility 属性配合节点的 [Layer 属性](../../concepts/scene/node-component.md#设置节点的-layer-属性) 共同决定的。用户可通过代码设置 Visibility 的值来完成分组渲染。所有节点默认都属于 DEFAULT 层，在所有相机都可见。
 
 ### 设置 Visibility 属性
 
@@ -72,4 +72,4 @@ ev = <mlog>log</mlog> <sub>2</sub> (ApertureValue<sup>2</sup> / ShutterValue*k /
 
 ![hdr2](./camera/hdr2.png)
 
-若要启用场景 HDR 可以参考：[切换 HDR/LDR 模式](../../concepts/scene/skybox.md#E5%88%87%E6%8D%A2-hdrldr-%E6%A8%A1%E5%BC%8F)。
+若要启用场景 HDR 可以参考：[切换 HDR/LDR 模式](../../concepts/scene/skybox.md#切换-hdrldr-模式)。
