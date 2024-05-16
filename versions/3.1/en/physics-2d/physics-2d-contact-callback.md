@@ -102,7 +102,7 @@ Collision 3<br>
     ...
 </pre>
 </td>
-<tr>
+</tr>
 </tbody>
 </table>
 
