@@ -12,7 +12,7 @@ ctx.fillColor = Color.GREEN;
 ctx.fill();
 ```
 
-<a href="fill.png"><img src="./fill.png"></a>
+<a href="./fill.png"><img src="./fill.png"></a>
 
 <hr>
 

@@ -15,7 +15,7 @@ ctx.rect(20,20,80,100);
 ctx.stroke();
 ```
 
-<a href="lineWidth.png"><img src="./lineWidth.png"></a>
+<a href="./lineWidth.png"><img src="./lineWidth.png"></a>
 
 <hr>
 

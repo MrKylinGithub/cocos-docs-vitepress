@@ -198,9 +198,11 @@ Cocos Creator 允许将该比例映射为另一个比例，以实现不同的“
 - `quadInOut`：渐变由慢到快再到慢
 - `quadOutIn`：渐变由快到慢再到快
 
+<!--
 <script src="./easing-method-example.js"> </script>
 <button onclick="onEasingMethodExampleButtonClicked()">展开对比</button>
 <div id="easing-method-example-panel"> </div>
+-->
 
 ### 曲线值与插值方式
 

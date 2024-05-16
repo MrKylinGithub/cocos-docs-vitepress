@@ -22,7 +22,7 @@ ctx.bezierCurveTo(20,100,200,100,200,20);
 ctx.stroke();
 ```
 
-<a href="bezierCurveTo.png"><img src="./bezierCurveTo.png"></a>
+<a href="./bezierCurveTo.png"><img src="./bezierCurveTo.png"></a>
 
 <hr>
 

@@ -58,6 +58,6 @@ __TextureCube__ obtained from a __panorama__ in __Cocos Creator__:
 
 __TextureCube__ obtained by making a __CubeMap__ in __Cocos Creator__:
 
-![CubeMap](../concepts/scene/skybox/Cubemap_Inspector.png)
+![CubeMap](../concepts/scene/skybox/cubemap-properties.png)
 
 To learn more about the use of __TextureCube__ and __CubeMaps__, please refer to the [Skybox](../concepts/scene/skybox.md) documentation.

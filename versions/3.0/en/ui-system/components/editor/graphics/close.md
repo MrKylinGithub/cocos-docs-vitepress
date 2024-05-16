@@ -13,7 +13,7 @@ ctx.close();
 ctx.stroke();
 ```
 
-<a href="close.png"><img src="./close.png"></a>
+<a href="./close.png"><img src="./close.png"></a>
 
 <hr>
 

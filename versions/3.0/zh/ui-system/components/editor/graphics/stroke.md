@@ -12,7 +12,7 @@ ctx.lineTo(70, 20);
 ctx.stroke();
 ```
 
-<a href="stroke.png"><img src="./stroke.png"></a>
+<a href="./stroke.png"><img src="./stroke.png"></a>
 
 <hr>
 
