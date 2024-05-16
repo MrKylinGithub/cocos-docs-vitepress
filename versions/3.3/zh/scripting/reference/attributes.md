@@ -17,7 +17,7 @@
 | step | 指定数值在编辑器中调节的步长 | number | undefined | - |
 | range | 一次性设置 min、max、step | [min, max, step] | undefined | step 值可选 |
 | slide | 在 **属性检查器** 面板中显示为滑动条 | boolean | false | - |
-| group | 在 **属性检查器** 面板中显示为分组，样式默认为 tab | { name } 或 { id, name, displayOrder, style } | undefined | 详见 [group 参数](../decorator.md#group) |
+| group | 在 **属性检查器** 面板中显示为分组，样式默认为 tab | `{ name } 或 { id, name, displayOrder, style }` | undefined | 详见 [group 参数](../decorator.md#group) |
 
 ## 序列化相关参数
 

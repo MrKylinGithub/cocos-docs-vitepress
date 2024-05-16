@@ -139,7 +139,7 @@ target_include_directories(${LIB_NAME} PRIVATE
             [source1] [source2 ...])
     ```
 
-    - `name`：表示添加一个名为 <name> 的目标库，由命令中列出的源文件（source1、source2）构建而成，在项目中是全局唯一的。源文件若是在后续通过 [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html?highlight=target_sources) 指定，那么这里就可以忽略。
+    - `name`：表示添加一个名为 `<name>` 的目标库，由命令中列出的源文件（source1、source2）构建而成，在项目中是全局唯一的。源文件若是在后续通过 [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html?highlight=target_sources) 指定，那么这里就可以忽略。
 
     - `STATIC`（静态库）、`SHARED`（动态库）、`MODULE`（模块库）：用于指定要创建的库的类型。STATIC 库是对象文件的档案，用于连接其他目标。共享库是动态链接的，并在运行时加载。MODULE 库是插件，不被链接到其他目标中，但可以在运行时使用类似 dlopen 的功能动态加载。
 

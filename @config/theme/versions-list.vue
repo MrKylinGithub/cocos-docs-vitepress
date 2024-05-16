@@ -27,6 +27,15 @@ const list = ref([
     },
     {
         version: '3.6'
+    },
+    {
+        version: '3.5'
+    },
+    {
+        version: '3.4'
+    },
+    {
+        version: '3.3'
     }
 ]);
 
