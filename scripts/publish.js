@@ -2,23 +2,23 @@ import process from 'process';
 import fs from 'fs';
 import { exec } from 'child_process';
 
-let spawnCommand = (command, args) => {
+let spawnCommand = (command,targetVersion) => {
     return new Promise((resolve, reject) => {
-        const child = exec(command, args);
+        const child = exec(command);
 
         child.stdout.on('data', (data) => {
-            process.stdout.write(`building: ${data}`);
+            process.stdout.write(`${targetVersion}: ${data}`);
         });
 
         child.stderr.on('data', (data) => {
-            process.stderr.write(`building: ${data}`);
+            process.stderr.write(`${targetVersion}: ${data}`);
         });
 
         child.on('close', (code) => {
             if (code === 0) {
                 resolve(code);
             } else {
-                reject(new Error(`子进程退出码: ${code}`));
+                reject(new Error(`${targetVersion}: ${code}`));
             }
         });
 
@@ -27,6 +27,20 @@ let spawnCommand = (command, args) => {
         });
     });
 };
+
+async function publishTargetVersion(targetVersion){
+    let bExist = fs.existsSync(targetVersion);
+    if (!bExist) {
+        console.log(targetVersion, 'does not exist.');
+        return;
+    }
+
+    console.log('Generating SUMMARY.md -> summary.json',targetVersion);
+    await spawnCommand(`node ./scripts/create-sidebar.js ${targetVersion}/en/SUMMARY.md`,targetVersion);
+    await spawnCommand(`node ./scripts/create-sidebar.js ${targetVersion}/zh/SUMMARY.md`,targetVersion);
+    console.log('Generating SUMMARY.md -> summary.json Complete',targetVersion);
+    await spawnCommand(`npx vitepress build ${targetVersion}`,targetVersion);
+}
 
 (async () => {
     const args = process.argv.slice(2);
@@ -46,15 +60,17 @@ let spawnCommand = (command, args) => {
         return;
     }
 
-    let bExist = fs.existsSync(targetVersion);
-    if (!bExist) {
-        console.log(targetVersion, 'does not exist.');
-        return;
+    if(targetVersion == 'versions/all'){
+        let files = fs.readdirSync('versions');
+        files.forEach(file=>{
+            file = 'versions/'+file;
+            if(fs.statSync(file).isDirectory()){
+                publishTargetVersion(file);
+            }
+        });
+    }
+    else{
+        publishTargetVersion(targetVersion);
     }
 
-    console.log('Generating SUMMARY.md -> summary.json');
-    await spawnCommand(`node ./scripts/create-sidebar.js ${targetVersion}/en/SUMMARY.md`);
-    await spawnCommand(`node ./scripts/create-sidebar.js ${targetVersion}/zh/SUMMARY.md`);
-    console.log('Generating SUMMARY.md -> summary.json Complete');
-    await spawnCommand(`npx vitepress build ${targetVersion}`);
 })();
