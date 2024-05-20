@@ -16,6 +16,40 @@ export const shared = defineConfig({
     }
   ],
 
+  head: [
+    [
+      'script',
+      {},
+      `
+      function isChildOf(A, B) {
+        let parent = A.parentNode;
+        
+        while (parent !== null) {
+            if (parent === B) {
+                return true;
+            }
+            parent = parent.parentNode;
+        }
+    
+        return false;
+    }
+    
+    document.addEventListener('click', e => {
+        if(e.target?.tagName === 'IMG') {
+            const wrap = document.querySelector('.content-container');
+            if(!wrap) return;
+    
+            const isChildImg = isChildOf(e.target, wrap);
+            if(isChildImg) {
+                console.log('cccc')
+                window.open(e.target.src);
+            }
+        } 
+    }, false)
+      `
+    ]
+  ],
+
   /* prettier-ignore */
 //   head: [
 //     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
