@@ -62,9 +62,12 @@ While providing a powerful and complete toolchain, the editor provides an open p
 
 Below is the technical architecture diagram of Cocos Creator
 
-<a href="./structure-editor.png"><img src="./structure-editor.png" alt="Cocos Creator structure editor"></a>
+![./structure-editor.png](./structure-editor.png)
+
 <div style="text-align:center"><p>Figure 1</p></div>
-<a href="./structure-engine.png"><img src="./structure-engine.png" alt="Cocos Creator structure engine"></a>
+
+![./structure-engine.png](./structure-engine.png)
+
 <div style="text-align:center"><p>Figure 2</p></div>
 
 As you can see from the figure, the editor is a development environment built on top of the Electron framework. The engine is responsible for providing many easy-to-use components and a unified interface for each platform.

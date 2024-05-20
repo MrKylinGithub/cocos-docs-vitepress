@@ -16,7 +16,7 @@ ctx.circle(200,200, 200);
 ctx.stroke();
 ```
 
-<a href="circle.png"><img src="./circle.png"></a>
+<img src="./circle.png">
 
 <hr>
 

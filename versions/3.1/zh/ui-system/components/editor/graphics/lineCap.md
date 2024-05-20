@@ -18,8 +18,7 @@ ctx.moveTo(100, 100);
 ctx.lineTo(300, 100);
 ctx.stroke();
 ```
-
-<a href="lineCap.png"><img src="./lineCap.png"></a>
+<img src="./lineCap.png">
 
 <hr>
 
