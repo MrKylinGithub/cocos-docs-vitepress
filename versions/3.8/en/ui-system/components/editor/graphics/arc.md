@@ -21,7 +21,7 @@ ctx.arc(100,75,50,0,1.5 * Math.PI);
 ctx.stroke();
 ```
 
-<a href="./arc.png"><img src="./arc.png"></a>
+<img src="./arc.png">
 
 <hr>
 

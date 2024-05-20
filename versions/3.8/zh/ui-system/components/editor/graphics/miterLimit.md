@@ -21,7 +21,7 @@ ctx.lineTo(20,100);
 ctx.stroke();
 ```
 
-<a href="./miterLimit.png"><img src="./miterLimit.png"></a>
+<img src="./miterLimit.png">
 
 
 <hr>
