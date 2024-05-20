@@ -7,7 +7,7 @@
 
 The overall JS/Native communication call structure in the ABCmouse project has always been based on the `callStaticMethod <-> evalString` approach. The `callStaticMethod` method makes it possible to call `Java/Objective-C` static methods directly in JavaScript through the reflection mechanism. With the `evalString` method, we can execute JS code, so that we can communicate with each other.
 
-<a href="./jsb/infrastructure.png"><img src="./jsb/infrastructure.png" alt=" "></a>
+<img src="./jsb/infrastructure.png" alt=" ">
 <div style="text-align:center"><p>New ABCmouse application architecture: communication with evalString based on callStaticMethod</p></div>
 
 Although it is easier to add new business logic after encapsulating the interface in the upper layer based on this approach. However, over-reliance on evalString often brings some pitfalls. As an example on the Android side.
@@ -175,7 +175,7 @@ The methodological correspondence of the three layers is as follows.
 
 The timing of this call process is as follows.
 
-<a href="./jsb/jsb_process.jpg"><img src="./jsb/jsb_process.jpg" alt=" "></a>
+<img src="./jsb/jsb_process.jpg" alt=" ">
 <div style="text-align:center"><p>Call timing diagram (quoted from Cocos Creator documentation)</p></div>
 
 The process is similar to the one above. First, we need to define the interface and the fields, let's draw up the simplest downloader `FileDownloader`, which has the `download(url, path, callback)` interface, and in the `callback` we need to get the `code`, `msg`. And to make it easy to use, we mount it under the `jsb` object, so we can call it simply with the following code:

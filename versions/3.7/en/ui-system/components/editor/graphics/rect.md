@@ -17,7 +17,7 @@ ctx.rect(20,20,150,100);
 ctx.stroke();
 ```
 
-<a href="./rect.png"><img src="./rect.png"></a>
+<img src="./rect.png">
 
 ```ts
 const ctx = node.getComponent(Graphics);
@@ -41,7 +41,7 @@ ctx.rect(50,50,150,80);
 ctx.stroke();
 ```
 
-<a href="./rect2.png"><img src="./rect2.png"></a>
+<img src="./rect2.png">
 
 <hr>
 
