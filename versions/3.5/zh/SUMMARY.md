@@ -1,6 +1,8 @@
 # Summary
 
-[Cocos Creator 3.5 用户手册](index.md)
+## 用户手册 3.5
+
+- [Cocos Creator 3.5](index.md)
 
 ## 基础使用
 

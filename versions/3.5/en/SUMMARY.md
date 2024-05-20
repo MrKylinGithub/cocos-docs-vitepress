@@ -1,8 +1,10 @@
 # Summary
 
-## Beginners Guide
+## User Manual 3.5
 
-[Introduction](index.md)
+- [Cocos Creator 3.5](index.md)
+
+## Beginners Guide
 
 - [Basic Usage](getting-started/index.md)
     - [About Cocos Creator](getting-started/introduction/index.md)

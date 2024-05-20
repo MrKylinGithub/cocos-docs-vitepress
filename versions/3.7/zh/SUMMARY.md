@@ -1,9 +1,8 @@
 # Summary
 
-[Cocos Creator 3.7 用户手册](index.md)
+## 用户手册 3.7
 
-## 简介
-
+- [Cocos Creator 3.7](index.md)
 - [关于 Cocos Creator](getting-started/introduction/index.md)
 - [获取帮助和支持](getting-started/support.md)
 

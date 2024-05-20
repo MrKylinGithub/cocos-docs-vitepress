@@ -1,9 +1,8 @@
 # Summary
 
-[Cocos Creator User Manual 3.7](index.md)
+## User Manual 3.7
 
-## Introduction
-
+- [Cocos Creator 3.7](index.md)
 - [About Cocos Creator](getting-started/introduction/index.md)
 - [Support](getting-started/support.md)
 
