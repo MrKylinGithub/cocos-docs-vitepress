@@ -1,9 +1,8 @@
 # Summary
 
-[Cocos Creator User Manual 3.8](index.md)
+## User Manual 3.8 (LTS)
 
-## Introduction
-
+- [Cocos Creator 3.8 LTS](index.md)
 - [About Cocos Creator](getting-started/introduction/index.md)
 - [Support](getting-started/support.md)
 

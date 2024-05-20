@@ -1,8 +1,12 @@
 [
     {
-        "text": "Introduction",
+        "text": "User Manual 3.8 (LTS)",
         "collapsed": false,
         "items": [
+            {
+                "text": "Cocos Creator 3.8 LTS",
+                "link": "index.md"
+            },
             {
                 "text": "About Cocos Creator",
                 "link": "getting-started/introduction/index.md"
