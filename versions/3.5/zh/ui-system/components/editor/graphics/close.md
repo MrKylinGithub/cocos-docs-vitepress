@@ -14,7 +14,7 @@ ctx.close();
 ctx.stroke();
 ```
 
-<a href="./close.png"><img src="./close.png"></a>
+<img src="./close.png">
 
 <hr>
 
