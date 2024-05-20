@@ -49,7 +49,7 @@ function traverseDirectory(directoryPath) {
 }
 
 // 指定要遍历的文件夹路径
-const directoryPath = path.join('./', './versions/3.5');
+const directoryPath = path.join('./', './versions/3.6');
 
 // 调用函数遍历指定文件夹
 traverseDirectory(directoryPath);
