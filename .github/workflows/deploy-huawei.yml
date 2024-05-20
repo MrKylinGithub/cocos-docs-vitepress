@@ -1,0 +1,68 @@
+name: 发布到华为云
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  judge:
+    if: contains(github.event.head_commit.message, 'docs:')
+    runs-on: ubuntu-latest
+    steps:
+        - name: Extract version from commit message
+          run: |
+            COMMIT_MSG=$(echo '${{ github.event.head_commit.message }}' | grep -oP '(?<=docs:)\d+\.\d+')
+            if [ -z "$COMMIT_MSG" ]; then
+              echo "没有指定需要发布的版本"
+              exit 1  
+            fi
+            echo "将构建版本： $COMMIT_MSG !"
+
+  deploy:
+    needs: judge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract version from commit message
+        id: extract
+        run: |
+            COMMIT_MSG=$(echo '${{ github.event.head_commit.message }}' | grep -oP '(?<=docs:)\d+\.\d+')
+            echo "::set-output name=version::$COMMIT_MSG"
+      
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+            node-version: 22
+            cache: 'npm'
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 构建项目
+        run: npx vitepress build versions/${{ steps.extract.outputs.version }}
+
+      - name: Authenticate to Huawei Cloud
+        uses: huaweicloud/auth-action@v1.0.0
+        with: 
+            access_key_id: ${{ secrets.ACCESSKEY }} 
+            secret_access_key: ${{ secrets.SECRETACCESSKEY }}
+            region: 'cn-north-4'  
+
+      - name: Upload File to OBS
+        uses: huaweicloud/obs-helper@master
+        id: upload_file_to_obs
+        with:
+          bucket_name: 'cce-creator-docs-test'
+          local_file_path: ./versions/${{ steps.extract.outputs.version }}/.vitepress/dist
+          obs_file_path: gitbook/creator/
+          operation_type: upload 
+          include_self_folder: true     
+
+            
+
+    
