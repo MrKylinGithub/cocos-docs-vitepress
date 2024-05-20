@@ -16,7 +16,7 @@ ctx.lineTo(300,150);
 ctx.stroke();
 ```
 
-<a href="moveTo.png"><img src="./moveTo.png"></a>
+<img src="./moveTo.png">
 
 <hr>
 

@@ -12,8 +12,7 @@ ctx.rect(20,20,250,200);
 ctx.stroke();
 ```
 
-<a href="strokeColor.png"><img src="./strokeColor.png"></a>
-
+<img src="./strokeColor.png">
 
 <hr>
 

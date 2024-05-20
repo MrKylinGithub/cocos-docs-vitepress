@@ -20,7 +20,7 @@ ctx.quadraticCurveTo(20,100,200,20);
 ctx.stroke();
 ```
 
-<a href="quadraticCurveTo.png"><img src="./quadraticCurveTo.png"></a>
+<img src="./quadraticCurveTo.png">
 
 <hr>
 
