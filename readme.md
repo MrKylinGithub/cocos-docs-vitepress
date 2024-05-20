@@ -13,3 +13,9 @@ npx vitepress build versions/3.8
 
 ## 本地预览具体版本
 npx vitepress preview versions/3.8
+
+## 发布版本
+### 发布单个
+node ./scripts/publish.js versions/3.8
+### 发布全部
+node ./scripts/publish.js versions/all
