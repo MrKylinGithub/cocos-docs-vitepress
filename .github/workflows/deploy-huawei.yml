@@ -40,11 +40,11 @@ jobs:
             node-version: 22
             cache: 'npm'
 
-     # - name: 安装依赖
-       # run: npm install
+      - name: 安装依赖
+        run: npm install
 
-      #- name: 构建项目
-        # run: npx vitepress build versions/${{ steps.extract.outputs.version }}
+      - name: 构建项目
+        run: npx vitepress build versions/${{ steps.extract.outputs.version }}
 
       - name: 登录华为云
         uses: huaweicloud/auth-action@v1.0.0
