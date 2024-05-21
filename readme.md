@@ -15,8 +15,16 @@ npx vitepress build versions/3.8
 npx vitepress preview versions/3.8
 
 ## 发布
-feat(docs:3.8): xxxxx 会将 3.8 的版本更新到测试环境
-feat(publish:docs:3.8): xxxxx 会将 3.8 的版本更新到正式环境
+
+将 3.8 的版本更新到测试环境
+```bash
+feat(docs:3.8): xxxxx 
+```
+
+将 3.8 的版本更新到正式环境
+```bash
+feat(publish:docs:3.8): xxxxx
+```
 
 提交信息中带有 docs: 会触发 CI 任务， ci 会提取需要发布的版本信息，如果提取不到，则退出任务。
 
