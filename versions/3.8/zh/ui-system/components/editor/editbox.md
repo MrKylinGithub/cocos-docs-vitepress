@@ -32,7 +32,7 @@ EditBox 的脚本接口请参考 [EditBox API](__APIDOC__/zh/class/EditBox)。
 
 ## EditBox 事件
 
-![editbox-event](editbox/editbox-event.png)
+![editbox-event](./editbox/editbox-event.png)
 
 事件结构参考：[组件事件结构](./button.md#组件事件结构)
 
