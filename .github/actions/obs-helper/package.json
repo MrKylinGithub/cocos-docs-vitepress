@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "description": "Upload/Download files or folders to Huawei Cloud OBS.",
-    "main": "lib/main.js",
+    "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
         "package": "ncc build -m --license licenses.txt",
