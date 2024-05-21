@@ -53,31 +53,6 @@ jobs:
             secret_access_key: ${{ secrets.SECRETACCESSKEY }}
             region: 'cn-north-4'  
         
-            
-      # 由于最新版的发布路径是不带版本号的，所以需要特殊处理，当前最新版是 3.8  
-      # 后期最新版为 3.9 的时候，需要将这边的判断条件从 3.8 改为 3.9
-
-      - name: 上传文件到华为云(测试环境-最新版)
-        uses: huaweicloud/obs-helper@master
-        if: ${{ steps.extract.outputs.version == '3.8' }}
-        with:
-          bucket_name: 'cce-creator-docs-test'
-          local_file_path: ./versions/${{ steps.extract.outputs.version }}/.vitepress/dist
-          obs_file_path: gitbook/creator/manual/
-          operation_type: upload 
-          include_self_folder: false 
-          
-      - name: 上传文件到华为云(正式环境-最新版)
-        uses: huaweicloud/obs-helper@master
-        if: ${{ steps.extract.outputs.version == '3.8' && contains(github.event.head_commit.message, 'publish:docs:') }}  
-        with:
-          bucket_name: 'cce-creator-docs-pro'
-          local_file_path: ./versions/${{ steps.extract.outputs.version }}/.vitepress/dist
-          obs_file_path: gitbook/creator/manual/
-          operation_type: upload 
-          include_self_folder: false     
-
-      
       # 按版本上传到对应的文件去
 
       - name: 上传文件到华为云(测试环境)
