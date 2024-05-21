@@ -48,7 +48,7 @@ const zh = defineConfig({
 
 export default defineConfig({
   ...shared,
-  base: '/',
+  base: '/creator/manual/',
   // base: `/${version}/`, 
   // base: `/cocos-creator-docs/`, // for gitpage
   locales: {
