@@ -388,3 +388,23 @@ export const version = '2.4';
 - zh/同上
 
 
+现在有个东西需要你决定一下，我们当前的多版本是这样发布的：
+
+以最新版为 3.8 举例：
+老版本：  https://docs.cocos.com/creator/3.7/manual/zh/  （子路径带版本号）
+最新版： https://docs.cocos.com/creator/manual/zh/ （子路径不带版本号）
+
+如果用户访问  https://docs.cocos.com/creator/3.8/manual/zh/ 会被重定向到  https://docs.cocos.com/creator/manual/zh/
+
+带来的维护成本就是在 vitepress 的构建中，如果是最新版， 它的base 要配置成  base: '/creator/manual/',
+老版本是配置成 base: '/creator/manual/3.7', 这样多版本的配置就不是统一的。
+后期增加了 3.9, 你需要来改 3.8 的配置 为 base: '/creator/manual/3.8', 
+
+然后在发布流程中，也会判断 如果发布的是 最新版 （如3.8） 需要将它的构建产物 推到  gitbook/creator/manual/ 而非   gitbook/creator/${{ version }}/manual/
+
+所以想问你，是否可以改成 如果  https://docs.cocos.com/creator/manual/zh/  重定向到  https://docs.cocos.com/creator/3.8/manual/zh/ 
+
+这样所有版本的构建配置都是一致的，发布流程也是一致的，唯独少强那边做个重定向，把不带版本的地址，重定向到最新版的地址。
+
+
+少强那边我问过，他可以改， 现在就看你的取舍。 因为后期是你维护，现在发布流程是走通了
