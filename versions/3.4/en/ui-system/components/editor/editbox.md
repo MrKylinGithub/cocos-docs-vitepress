@@ -2,7 +2,7 @@
 
 __EditBox__ is a text input component, use this component to get user input easily.
 
-![editbox](editBox/editbox.png)
+![editbox](editbox/editbox.png)
 
 Click the __Add Component__ button at the bottom of the __Inspector__ panel and select __UI/EditBox__ to add the __EditBox__ component to the node.
 
