@@ -48,7 +48,9 @@ const zh = defineConfig({
 
 export default defineConfig({
   ...shared,
-  base: `/cocos-creator-docs/`, // `/${version}/`
+  base: '/',
+  // base: `/${version}/`, 
+  // base: `/cocos-creator-docs/`, // for gitpage
   locales: {
     // 我们的文档都在 /en/ /zh/ 等文件夹里面，没有在根目录的文档 所以不用配 root
     // root: { label: 'English', ...en },
