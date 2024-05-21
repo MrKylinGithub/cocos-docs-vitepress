@@ -26,6 +26,11 @@ feat(docs:3.8): xxxxx
 feat(publish:docs:3.8): xxxxx
 ```
 
+只更新代码，不做任何发布
+```bash
+feat: xxxxx
+```
+
 提交信息中带有 docs: 会触发 CI 任务， ci 会提取需要发布的版本信息，如果提取不到，则退出任务。
 
 通过判断是否有 publish:docs: 来决定是将 dist 文件夹推到 测试环境还是正式环境
