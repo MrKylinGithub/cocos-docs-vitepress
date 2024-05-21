@@ -30,7 +30,7 @@ jobs:
         id: extract
         run: |
             COMMIT_MSG=$(echo '${{ github.event.head_commit.message }}' | grep -oP '(?<=docs:)\d+\.\d+')
-            echo "::set-output name=version::$COMMIT_MSG"
+            echo "version=$COMMIT_MSG" >> "$GITHUB_OUTPUT"
       
       - uses: actions/checkout@v4
 
@@ -44,7 +44,7 @@ jobs:
         run: npm install
 
       - name: 构建项目
-        run: npx vitepress build versions/${{ steps.extract.outputs.version }}
+        run: npx vitepress build versions/$version
 
       - name: 登录华为云
         uses: huaweicloud/auth-action@v1.0.0
@@ -55,7 +55,7 @@ jobs:
         
       # 按版本上传到对应的文件去
 
-      - name: 上传文件到华为云(测试环境)
+      - name: 上传文件到华为云 (测试环境)
         uses: huaweicloud/obs-helper@master
         with:
           bucket_name: 'cce-creator-docs-test'
