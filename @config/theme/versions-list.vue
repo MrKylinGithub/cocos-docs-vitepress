@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="js">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress'
 import { langPathMap} from '../config'
 
@@ -18,56 +18,19 @@ const props = defineProps({
     currentVersion: String
 })
 
-const list = ref([
-    {
-        version: '3.8'
-    },
-    {
-        version: '3.7',
-    },
-    {
-        version: '3.6'
-    },
-    {
-        version: '3.5'
-    },
-    {
-        version: '3.4'
-    },
-    {
-        version: '3.3'
-    },
-    {
-        version: '3.2'
-    },
-    {
-        version: '3.1'
-    },
-    {
-        version: '3.0'
-    },
-    {
-        version: '2.4'
-    },
-    {
-        version: '2.3'
-    },
-    {
-        version: '2.2'
-    },
-    {
-        version: '2.1'
-    },
-    {
-        version: '2.0'
-    },
-    {
-        version: '1.10'
-    },
-    {
-        version: '1.9'
-    },
-]);
+const list = ref([]);
+
+onMounted(() => {
+    const url = `/creator/versions/versions.json?v=${Date.now()}`;
+    fetch(url)
+        .then((res) => {
+            if(res.ok) {
+                res.json().then((data) => {
+                    list.value = data;
+                });
+            }
+        })
+})
 
 function changeVersion(e) {
     const ver = e.target.value;
