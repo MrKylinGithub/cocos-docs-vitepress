@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="js">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress'
 import { langPathMap} from '../config'
 
@@ -30,6 +30,15 @@ const list = ref([
         version: '3.6'
     }
 ]);
+
+onMounted(() => {
+    const url = `https://cce-creator-docs-test.obs.cn-north-4.myhuaweicloud.com/gitbook/creator/versions/versions.json?v=${Date.now()}`;
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            list.value = data;
+        });
+})
 
 function changeVersion(e) {
     const ver = e.target.value;
