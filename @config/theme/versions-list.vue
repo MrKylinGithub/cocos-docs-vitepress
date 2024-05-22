@@ -41,7 +41,7 @@ function changeVersion(e) {
 
     if(!goToVersion) return;
     
-    const link = goToVersion.link || `https://docs.cocos.com/creator/${ver}/manual/${langPathMap[lang.value]}/`;
+    const link = goToVersion.link || `${window.location.origin}/creator/${ver}/manual/${langPathMap[lang.value]}/`;
     window.location.href = link;
 
     // hack
