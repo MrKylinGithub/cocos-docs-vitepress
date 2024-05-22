@@ -44,7 +44,7 @@ jobs:
         run: npm install
 
       - name: 构建项目
-        run: node scripts/publish.js versions/${{ steps.extract.outputs.version }}
+        run: node scripts/publish.js --version=versions/${{ steps.extract.outputs.version }}
 
       - name: 登录华为云
         uses: huaweicloud/auth-action@v1.0.0
