@@ -1186,14 +1186,14 @@ function uploadFile(obsClient, bucketName, localFilePath, obsFilePath) {
             core.setFailed(`your local file "${localFilePath}" cannot be uploaded because it is larger than 5 GB`);
             return;
         }
-        core.info(`start upload file: "${localFilePath}"`);
+        // core.info(`start upload file: "${localFilePath}"`);
         const result = yield obsClient.putObject({
             Bucket: bucketName,
             Key: obsFilePath,
             SourceFile: localFilePath,
         });
         if (result.CommonMsg.Status < types_1.SUCCESS_STATUS_CODE) {
-            core.info(`succeessfully upload file: "${localFilePath}"`);
+            // core.info(`succeessfully upload file: "${localFilePath}"`);
         }
         else {
             core.setFailed(`failed to upload file: "${localFilePath}", because ${result.CommonMsg.Code}`);
@@ -1211,13 +1211,13 @@ exports.uploadFile = uploadFile;
  */
 function uploadFolder(obsClient, bucketName, obsFilePath) {
     return __awaiter(this, void 0, void 0, function* () {
-        core.info(`start create folder "${obsFilePath}/"`);
+        // core.info(`start create folder "${obsFilePath}/"`);
         const result = yield obsClient.putObject({
             Bucket: bucketName,
             Key: `${obsFilePath}/`,
         });
         if (result.CommonMsg.Status < types_1.SUCCESS_STATUS_CODE) {
-            core.info(`succeessfully create folder "${obsFilePath}/"`);
+            // core.info(`succeessfully create folder "${obsFilePath}/"`);
         }
         else {
             core.setFailed(`failed to create folder "${obsFilePath}/", because ${result.CommonMsg.Code}`);
