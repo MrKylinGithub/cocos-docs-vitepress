@@ -90,6 +90,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 **/.vitepress/dist/
+dist
 
 # Gatsby files
 .cache/
