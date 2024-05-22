@@ -24,7 +24,6 @@ const list = ref([
     },
     {
         version: '3.7',
-        link: 'https://www.baidu.com'
     },
     {
         version: '3.6'
@@ -32,7 +31,13 @@ const list = ref([
 ]);
 
 onMounted(() => {
-    const url = `https://cce-creator-docs-test.obs.cn-north-4.myhuaweicloud.com/gitbook/creator/versions/versions.json?v=${Date.now()}`;
+    const hostMap = {
+        'docs.cocos.com': 'https://docs.cocos.com',
+        'test-docs.cocos.com': 'https://test-docs.cocos.com',
+        'localhost': 'https://test-docs.cocos.com',
+    }
+    const host = hostMap[window.location.hostname];
+    const url = `${host}/creator/versions/versions.json?v=${Date.now()}`;
     fetch(url)
         .then((res) => res.json())
         .then((data) => {
