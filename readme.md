@@ -35,3 +35,16 @@ feat: xxxxx
 提交信息中带有 docs: 会触发 CI 任务， ci 会提取需要发布的版本信息，如果提取不到，则退出任务。
 
 通过判断是否有 publish:docs: 来决定是将 dist 文件夹推到 测试环境还是正式环境
+
+## 更新版本列表
+
+会推送 ./versions.json 到华为云 （测试环境）
+```bash
+feat(versions): xxxxx
+```
+
+
+会推送 ./versions.json 到华为云 （正式环境）
+```bash
+feat(publish:versions): xxxxx
+```
