@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitepress';
 import { github } from './config.ts';
 import { search as zhSearch } from './shared-theme-zh'
+import { link } from 'fs';
 
 export const shared = defineConfig({
-  title: 'creator-docs',
+  title: 'Cocos Creator',
 
   lastUpdated: true,
   cleanUrls: true,
@@ -86,45 +87,21 @@ export const shared = defineConfig({
 
 export function nav(version: string, lang: 'en' | 'zh') {
   return [ {
-    text: 'Cocos Creator',
-    items: [
-      {
-        text: {
-          en: 'API Ref',
-          zh: 'API 参考'
-        },
-        link: `https://docs.cocos.com/creator/${version}/api/${lang}/`
-      }
-    ].map(v => {
-      return {
-        link: v.link,
-        text: v.text[lang]
-      }
-    })
+    text: { zh:'Cocos Creator API 参考', en:'Cocos Creator API Ref'},
+    link: `https://docs.cocos.com/creator/${version}/api/${lang}/`
   },
   {
-    text: 'Cocos2d-x',
-    items: [
-      {
-        text: {
-          en: 'Manual',
-          zh: '用户手册'
-        },
-        link: `https://docs.cocos.com/cocos2d-x/manual/${lang}/`
-      },
-      {
-        text: {
-          en: 'API Ref',
-          zh: 'API 参考'
-        },
-        link: 'https://docs.cocos2d-x.org/api-ref/index.html'
-      }
-    ].map(v => {
-      return {
-        link: v.link,
-        text: v.text[lang]
-      }
-    })
-  }]
+    text: { zh:'Cocos Creator 下载', en:'Get Cocos Creator API'},
+    link:'https://www.cocos.com/'
+  },
+  {
+    text: { zh:'Cocos 资源商店', en:'Cocos Store'},
+    link:'https://store.cocos.com'
+  }].map(v => {
+    return {
+      link: v.link,
+      text: v.text[lang]
+    }
+  })
 }
 

@@ -4,7 +4,7 @@ import { github, branch } from './config'
 export default function(version: string) {
   return defineConfig({
     lang: 'en-US',
-    description: 'cocos creator docs',
+    description: 'Cocos Creator Docs',
   
     themeConfig: {
       
@@ -15,7 +15,7 @@ export default function(version: string) {
   
       footer: {
         message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2019-present cocos'
+        copyright: 'Copyright © 2019-present Cocos'
       }
     }
   })
