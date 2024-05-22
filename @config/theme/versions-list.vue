@@ -18,31 +18,18 @@ const props = defineProps({
     currentVersion: String
 })
 
-const list = ref([
-    {
-        version: '3.8'
-    },
-    {
-        version: '3.7',
-    },
-    {
-        version: '3.6'
-    }
-]);
+const list = ref([]);
 
 onMounted(() => {
-    const hostMap = {
-        'docs.cocos.com': 'https://docs.cocos.com',
-        'test-docs.cocos.com': 'https://test-docs.cocos.com',
-        'localhost': 'https://test-docs.cocos.com',
-    }
-    const host = hostMap[window.location.hostname];
-    const url = `${host}/creator/versions/versions.json?v=${Date.now()}`;
+    const url = `/creator/versions/versions.json?v=${Date.now()}`;
     fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            list.value = data;
-        });
+        .then((res) => {
+            if(res.ok) {
+                res.json().then((data) => {
+                    list.value = data;
+                });
+            }
+        })
 })
 
 function changeVersion(e) {
