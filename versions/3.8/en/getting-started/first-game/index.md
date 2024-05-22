@@ -449,21 +449,21 @@ export class PlayerController extends Component {
 
     // for fake tween
     // Whether the jump command is received or not
-    private _startJump: boolean = false.
+    private _startJump: boolean = false;
     // Jump step length
-    private _jumpStep: number = 0.
+    private _jumpStep: number = 0.0;
     // current jump time
-    private _curJumpTime: number = 0.
+    private _curJumpTime: number = 0.0;
     // length of each jump
-    private _jumpTime: number = 0.1.
+    private _jumpTime: number = 0.1;
     // current jump speed
-    private _curJumpSpeed: number = 0.
+    private _curJumpSpeed: number = 0.0;
     // current character position
-    private _curPos: Vec3 = new Vec3().
+    private _curPos: Vec3 = new Vec3();
     // the difference in position of the current frame movement during each jump
-    private _deltaPos: Vec3 = new Vec3(0, 0, 0).
+    private _deltaPos: Vec3 = new Vec3(0, 0, 0);
     // target position of the character
-    private _targetPos: Vec3 = new Vec3().
+    private _targetPos: Vec3 = new Vec3();
 
     start () {
         // Your initialization goes here.
@@ -1158,6 +1158,6 @@ We can display the current number of steps on the UI so that it will be a great 
 
 ## Conclusion
 
-Up to this point, you have basically mastered most of the contents of this chapter, next you can improve the game by improving the art and gameplay, for which we have also prepared an [advanced](. /advance.md) chapter as an option. If you are interested in other features of Cocos Creator, you can click on the summary on the left.
+Up to this point, you have basically mastered most of the contents of this chapter, next you can improve the game by improving the art and gameplay, for which we have also prepared an [advanced](./advance.md) chapter as an option. If you are interested in other features of Cocos Creator, you can click on the summary on the left.
 
-If you have any feedback or suggestions, you can visit our [forum](https://forum.cocos.org/) or request a question on [GIT](https://github.com/cocos/cocos-docs).
+If you have any feedback or suggestions, you can visit our [forum](https://discuss.cocos2d-x.org/) or request a question on [GIT](https://github.com/cocos/cocos-docs).
