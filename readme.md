@@ -2,10 +2,11 @@
 # Cocos Creator 用户手册
 
 - 官方文档地址：[https://docs.cocos.com](https://docs.cocos.com)
-- 引擎下载地址：[https://www.cocos.com/](https://www.cocos.com/)
+- 引擎下载地址：[https://www.cocos.com](https://www.cocos.com/)
 
 ## 生成侧边栏数据
 
+node ./scripts/create-sidebar.js versions/3.8/zh/SUMMARY.md
 node ./scripts/create-sidebar.js versions/3.8/en/SUMMARY.md
 
 ## 本地启动具体版本
