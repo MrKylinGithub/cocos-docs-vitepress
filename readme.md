@@ -7,6 +7,7 @@
 ## 生成侧边栏数据
 
 node ./scripts/create-sidebar.js versions/3.8/zh/SUMMARY.md
+
 node ./scripts/create-sidebar.js versions/3.8/en/SUMMARY.md
 
 ## 本地启动具体版本
